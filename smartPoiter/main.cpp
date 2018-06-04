@@ -16,10 +16,11 @@ int main(){
 
 	float x;
 	while (n>4){
-		x = (v*v*s + v*vs*s) / (v*v +2*v*vs - vs*vs);
+		x = (v*v*s + v*vs*s) / (v*v + 2*v*vs - vs*vs);
 		tRest += x/v + (s-x)/vs;
-	       	s -= vs*x/v + (s-x);	
-		n-=4;
+	       	s -= vs*(x/v) + (s-x);	
+		n -= 4;
+		cout << "tRest " << tRest << endl;
 	}
 
 	if (n>0){
